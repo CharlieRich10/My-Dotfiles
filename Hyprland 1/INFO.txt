@@ -1,0 +1,15 @@
+# General Info
+Colour theme: Nord
+Icon theme: Paprius
+Cursor: Bibata
+GTK theme: Nordic
+Bar: Hyprbar
+Lock screen: Hyprlock
+
+# Keybinds
+Open Wofi: SUPER + Space 
+Close window: SUPER + Q 
+Lock screen: SUPER + L 
+Those are all the ones I think I've changed.
+
+My first rice, cut me some slack.
