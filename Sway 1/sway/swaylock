@@ -1,0 +1,48 @@
+
+#███████╗██╗    ██╗ █████╗ ██╗   ██╗██╗      ██████╗  ██████╗██╗  ██╗
+#██╔════╝██║    ██║██╔══██╗╚██╗ ██╔╝██║     ██╔═══██╗██╔════╝██║ ██╔╝
+#███████╗██║ █╗ ██║███████║ ╚████╔╝ ██║     ██║   ██║██║     █████╔╝ 
+#╚════██║██║███╗██║██╔══██║  ╚██╔╝  ██║     ██║   ██║██║     ██╔═██╗ 
+#███████║╚███╔███╔╝██║  ██║   ██║   ███████╗╚██████╔╝╚██████╗██║  ██╗
+#╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝
+
+# Configuration file for swaylock
+# Please refer to the wiki: https://man.archlinux.org/man/swaylock.1
+# https://github.com/CharlieRich10/My-Dotfiles
+
+# Set the background image and font
+image=~/Pictures/wall.jpg
+font=monospace
+font-size=14
+
+# Set the indicator size
+indicator-thickness=20
+indicator-radius=100
+line-uses-inside
+
+# Set ring color
+ring-color=#E2232A
+ring-ver-color=#E2232A
+ring-wrong-color=#E2232A
+ring-wrong-color=#E2232A
+ring-caps-lock-color=#E2232A
+ring-clear-color=#E2232A
+
+# Set inside color
+inside-color=#151515
+inside-ver-color=#151515
+inside-wrong-color=#151515
+inside-clear-color=#151515
+inside-caps-lock-color=#151515
+inside-clear-color=#151515
+
+# Set text color
+text-color=#ffffff
+text-ver-color=#ffffff
+text-wrong-color=#ffffff
+text-clear-color=#ffffff
+text-caps-lock-color=#ffffff
+text-clear-color=#ffffff
+
+# Set highlighted segment color
+key-hl-color=#151515

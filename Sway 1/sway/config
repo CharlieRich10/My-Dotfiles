@@ -1,0 +1,47 @@
+
+# ███████╗██╗    ██╗ █████╗ ██╗   ██╗     ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ 
+# ██╔════╝██║    ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ 
+# ███████╗██║ █╗ ██║███████║ ╚████╔╝     ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
+# ╚════██║██║███╗██║██╔══██║  ╚██╔╝      ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
+# ███████║╚███╔███╔╝██║  ██║   ██║       ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
+# ╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ 
+
+# Main config for Sway.
+# Please refer to the wiki: https://github.com/swaywm/sway/wiki
+# https://github.com/CharlieRich10/My-Dotfiles
+
+### Variables
+
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+
+# Your preferred terminal emulator
+set $term foot
+
+# Your preferred file manager
+set $fileman dolphin
+
+# Your preferred application launcher
+set $rofi_cmd rofi \
+        -terminal '$term'
+
+# Shows a combined list of the applications with desktop files and
+# executables from PATH.
+set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi 
+
+### Idle Congifuration
+ exec swayidle -w \
+          timeout 300 'swaylock -f -C ~/.config/sway/swaylock' \
+          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+	  before-sleep 'swaylock -f -C ~/.config/sway/swaylock'
+
+# Set dark theme
+exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
+# Set the env variable for Qt
+exec export QT_QPA_PLATFORMTHEME=qt5ct
+
+### Other Configurations
+include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
+include ~/.config/sway/keyboard
+include ~/.config/sway/look-feel

@@ -1,0 +1,43 @@
+
+#██╗      ██████╗  ██████╗ ██╗  ██╗███████╗
+#██║     ██╔═══██╗██╔═══██╗██║ ██╔╝██╔════╝
+#██║     ██║   ██║██║   ██║█████╔╝ ███████╗
+#██║     ██║   ██║██║   ██║██╔═██╗ ╚════██║
+#███████╗╚██████╔╝╚██████╔╝██║  ██╗███████║
+#╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝
+
+# Configuration for the look and feel of sway.
+# Please refer to the wiki: https://github.com/swaywm/sway/wiki
+# https://github.com/CharlieRich10/My-Dotfiles
+
+### Wallpaper
+output * bg ~/Pictures/wall.jpg fill
+
+### Window looks
+
+# Titlebar font
+font pango:monospace 6
+
+# Colours, border, background, text, indicator
+client.focused #E2232A #E2232A #151515 #E2232A
+client.focused_inactive #151515 #151515 #E2232A #E2232A
+client.unfocused #151515 #151515 #E2232A #2B2B2B
+
+# Window borders
+default_border normal
+default_floating_border normal 0
+titlebar_border_thickness 0
+titlebar_padding 4
+
+# Set the icon theme
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema icon-theme 'Papirus-Dark'
+}
+
+# Set the cursor
+seat * xcursor_theme Bibata-Modern-Classic 20
+
+# Window gaps
+gaps inner 3
+gaps outer 3
